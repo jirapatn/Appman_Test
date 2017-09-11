@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+    $("#btnSignIn").click(function(){
+    
+       var data = {
+  "email" : $("#txtEmail").val(),
+  "password" : $("#txtPassword").val()
+};
+$.ajax({
+  type: "POST",
+  url: "http://localhost:3000/api/login",
+  data: data,
+  dataType:"JSON",
+ success: function(data, textStatus, xhr) {
+        console.log(xhr.status);
+        if(xhr.status = 200){
+            alert("Login Successed");
+        }else{
+            $("#error").css("display", "block");
+        }   
+
+    }
+});
+
+$("#txtPassword").val("");
+$("#txtEmail").val("");
+    });
+
+
+   
+});
+</script>
+<body>
+<div>
+        <div class="divMain" >
+            <div class="divImage">
+                <img src="image/react.svg" class="image" />
+            </div>
+            <div class="formLogin" >
+                <div class="lbl">E-mail Address</div>
+                <div>
+                    <input type="text" id="txtEmail" class="inputbox" placeholder="example@example.com" />
+                </div>
+                <div class="lbl">Password</div>
+                <div>
+                    <input type="password" id="txtPassword" class="inputbox" placeholder="your password..." />
+                </div>
+                <div class="divError" id="error">E-mail or password is incorrect</div>
+                <div class="divBtn"><input type="button" id="btnSignIn" value="SIGN IN" class="btnSignin"/><div>
+                <div class="divFooter">
+                     <div class="divEmpty"></div>
+                    <div class="forgetPassword" > <a href="#" >Forget password ?</a></div>
+                    <div class="Create"><a href="#" >Create a new account</a></div>
+                   
+                <div>
+            </div>
+        <div>
+    </div>
+</body>
+</html>

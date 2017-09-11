@@ -1,0 +1,90 @@
+
+   .logo-spin {
+        animation: App-logo-spin infinite 3s linear;
+    }
+
+    @keyframes App-logo-spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+  html,body{
+        background: #EEE;
+    }
+.lbl{
+    padding:10px;
+}
+    .image{
+        width:180px;
+    }
+    .divImage{
+        text-align:center;
+        padding:10px;
+    }
+    .divMain{
+        margin: 0px auto;
+        background-color:ghostwhite;
+        width: 700px;
+        padding: 40px;
+    }
+
+     .formLogin{
+        width: 90%;
+        margin: 0px auto;
+    } 
+
+
+    .inputbox{
+        width: 90%;
+        font-size: 1em;
+        border:#ccc solid 2px;
+        padding: 15px;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+    .divBtn{
+     padding-top:25px;
+    text-align:center;
+   
+    }
+    .inputbox:focus{
+        border-color: #242526;
+    }
+    
+    .btnSignin{
+      
+        background-color:deepskyblue;
+        border:2px solid deepskyblue; 
+        padding: 25px 45px;
+        margin: 0px auto;
+        color: #FFF;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+       
+    }
+    .divError{
+        color:red;
+         width:95%; 
+         padding-top:5px;
+         display:none;
+    }
+    .divFooter{
+        padding-top:25px; 
+    }
+    .forgetPassword{
+        float: left;
+    }
+
+    .Create{
+        float: right;
+    }
+
+    .divEmpty{
+        clear:both;
+    }
